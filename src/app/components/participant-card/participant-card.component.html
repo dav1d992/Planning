@@ -1,0 +1,10 @@
+<div class="participant-card">
+  <h3>{{ participant().name }}</h3>
+  @if (isRevealed()) { :
+  <div [@voteReveal]>
+    &nbsp;<strong>{{ participant().vote }}</strong>
+  </div>
+  } @else {
+  <p>{{ participant().hasVoted ? ": ✅" : ": ⌛" }}</p>
+  }
+</div>
