@@ -90,7 +90,7 @@ export class PlanningBoardComponent {
     this.currentParticipantId = localStorage.getItem('participantId') || '';
   }
 
-  setVoteType(type: 'fibonacci' | 'onetoten') {
+  setVoteType(type: 'fibonacci' | 'onetoten' | 'double') {
     if (!this.sessionId) return;
     this.voteOptions = this.votePresets[type];
     this.service.updateVoteType(this.sessionId, type);
