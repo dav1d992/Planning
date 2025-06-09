@@ -105,7 +105,7 @@ export class SessionService {
 
   updateVoteType(
     sessionId: string,
-    voteType: 'fibonacci' | 'onetoten' | 'double'
+    voteType: 'fibonacci' | 'onetoten' | 'double' | 'onetofortynine'
   ): Promise<void> {
     const sessionRef = ref(this.db, `sessions/${sessionId}`);
     return update(sessionRef, { voteType });

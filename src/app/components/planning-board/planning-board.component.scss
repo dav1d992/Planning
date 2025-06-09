@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
+  margin-top: 3rem;
 }
 
 .vote-section {
@@ -16,19 +16,25 @@
   bottom: 0;
   left: 0;
   right: 0;
+  min-width: 300px;
 }
 
 .vote-options {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  max-width: 750px;
+  width: 100%;
   justify-content: center;
+  gap: 1rem;
   margin-bottom: 1rem;
   margin-top: 0.3rem;
-  gap: 1rem;
 }
 
 @media (max-width: 400px) {
   .vote-options {
     gap: 0.2rem;
+    max-width: 400px;
+    overflow-x: scroll;
   }
 }
 
